@@ -37,7 +37,8 @@ function expect(target) {
 //
 // Only add code to *THIS* section!
 
-function Dog(){
+function Dog(dogInfo){
+  dogInfo = dogInfo || {};
   this.status = 'normal';
   //return this;
   this.color = 'red';
@@ -46,13 +47,16 @@ function Dog(){
 
 
 
-function Human(){
+function Human( personInfo){
+  personInfo = personInfo || {};
   this.pet = function(kepler){
     kepler.status = 'happy';
     kepler.hungry = false;
     this.cool = false;
   };
-  this.feed = function(moonshine){
+  this.feed = function(dogInfo){
+    dogInfo.hungry = false;
+  }
     moonshine.hungry = false;
     this.cool = true;
   };
